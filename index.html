@@ -13,6 +13,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Lewati ke konten</a>
 
 <div class="layout">
   <!-- ════════════ SIDEBAR ════════════ -->
@@ -25,6 +26,7 @@
       </div>
     </div>
 
+    <nav aria-label="Navigasi utama">
     <div class="nav-section">
       <span class="nav-heading">UTAMA</span>
       <button class="nav-item active" data-page="dashboard">
@@ -77,6 +79,8 @@
       </button>
     </div>
 
+    </nav>
+
     <div class="sidebar-user">
       <div class="user-avatar" id="user-initial">A</div>
       <div class="user-info">
@@ -87,7 +91,7 @@
   </aside>
 
   <!-- ════════════ MAIN CONTENT ════════════ -->
-  <main class="main">
+  <main class="main" id="main-content" tabindex="-1">
     <!-- Header Print Only -->
     <div class="print-header">
       <h1 id="print-biz-name">FinanceFlow</h1>
@@ -211,7 +215,7 @@
               <button class="chip" onclick="fillExample('Setor modal pemilik 25jt transfer bank hari ini')">Modal 25jt Transfer</button>
             </div>
             <button class="primary-btn" id="btn-parse-nlp">
-              <span>Analisis Transaksi</span> →
+              <span>Analisis Transaksi</span>
             </button>
           </div>
         </div>
@@ -680,7 +684,7 @@
   <div class="modal">
     <div class="modal-header">
       <h3 id="pay-rp-title">Pembayaran Piutang / Utang</h3>
-      <button class="close-btn" onclick="closeModal('modal-pay-rp')">&times;</button>
+      <button class="close-btn" type="button" aria-label="Tutup dialog" onclick="closeModal('modal-pay-rp')">&times;</button>
     </div>
     <form id="form-pay-rp" onsubmit="submitRPPayment(event)">
       <input type="hidden" id="pay-rp-id">
@@ -713,7 +717,7 @@
   <div class="modal">
     <div class="modal-header">
       <h3>Tambah Akun Akuntansi (COA)</h3>
-      <button class="close-btn" onclick="closeModal('modal-account')">&times;</button>
+      <button class="close-btn" type="button" aria-label="Tutup dialog" onclick="closeModal('modal-account')">&times;</button>
     </div>
     <form id="form-add-account" onsubmit="saveAccount(event)">
       <div class="form-group">
