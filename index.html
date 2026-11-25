@@ -2,7 +2,9 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#14232f">
+  <meta name="description" content="FinanceFlow membantu mencatat transaksi dan mengelola laporan keuangan usaha.">
   <title>FinanceFlow | Sistem Akuntansi & Manajemen Keuangan Otomatis</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,52 +28,52 @@
     <div class="nav-section">
       <span class="nav-heading">UTAMA</span>
       <button class="nav-item active" data-page="dashboard">
-        <span class="nav-icon">📊</span> Dashboard
+        <span class="nav-icon" aria-hidden="true"></span> Dashboard
       </button>
       <button class="nav-item" data-page="transactions">
-        <span class="nav-icon">⇄</span> Transaksi
+        <span class="nav-icon" aria-hidden="true"></span> Transaksi
       </button>
       <button class="nav-item" data-page="receivables-payables">
-        <span class="nav-icon">📑</span> Utang &amp; Piutang
+        <span class="nav-icon" aria-hidden="true"></span> Utang &amp; Piutang
       </button>
     </div>
 
     <div class="nav-section">
       <span class="nav-heading">PEMBUKUAN &amp; AKUNTANSI</span>
       <button class="nav-item" data-page="journal">
-        <span class="nav-icon">▤</span> Jurnal Umum
+        <span class="nav-icon" aria-hidden="true"></span> Jurnal Umum
       </button>
       <button class="nav-item" data-page="ledger">
-        <span class="nav-icon">📖</span> Buku Besar
+        <span class="nav-icon" aria-hidden="true"></span> Buku Besar
       </button>
       <button class="nav-item" data-page="trial">
-        <span class="nav-icon">▥</span> Neraca Saldo
+        <span class="nav-icon" aria-hidden="true"></span> Neraca Saldo
       </button>
     </div>
 
     <div class="nav-section">
       <span class="nav-heading">LAPORAN KEUANGAN</span>
       <button class="nav-item" data-page="income">
-        <span class="nav-icon">📈</span> Laba Rugi
+        <span class="nav-icon" aria-hidden="true"></span> Laba Rugi
       </button>
       <button class="nav-item" data-page="balance-sheet">
-        <span class="nav-icon">⚖️</span> Posisi Keuangan
+        <span class="nav-icon" aria-hidden="true"></span> Posisi Keuangan
       </button>
       <button class="nav-item" data-page="cashflow">
-        <span class="nav-icon">💧</span> Arus Kas
+        <span class="nav-icon" aria-hidden="true"></span> Arus Kas
       </button>
       <button class="nav-item" data-page="equity">
-        <span class="nav-icon">🏛️</span> Perubahan Ekuitas
+        <span class="nav-icon" aria-hidden="true"></span> Perubahan Ekuitas
       </button>
     </div>
 
     <div class="nav-section">
       <span class="nav-heading">SISTEM</span>
       <button class="nav-item" data-page="accounts">
-        <span class="nav-icon">📑</span> Bagan Akun (COA)
+        <span class="nav-icon" aria-hidden="true"></span> Bagan Akun (COA)
       </button>
       <button class="nav-item" data-page="settings">
-        <span class="nav-icon">⚙️</span> Pengaturan
+        <span class="nav-icon" aria-hidden="true"></span> Pengaturan
       </button>
     </div>
 
@@ -88,8 +90,8 @@
   <main class="main">
     <!-- Header Print Only -->
     <div class="print-header">
-      <h1 id="print-biz-name">FinanceFlow Store</h1>
-      <p id="print-biz-address">Jl. Merdeka No. 45, Jakarta | Telp: 0812-3456-7890</p>
+      <h1 id="print-biz-name">FinanceFlow</h1>
+      <p id="print-biz-address">Lengkapi profil usaha pada menu Pengaturan</p>
       <div class="print-divider"></div>
       <h2 id="print-report-title">Laporan Keuangan</h2>
       <p id="print-report-period">Periode: Semua Data</p>
@@ -114,7 +116,7 @@
         <div class="stat-card">
           <div class="stat-header">
             <span>Total Pemasukan</span>
-            <span class="stat-icon income-bg">↗</span>
+            <span class="stat-icon income-bg"></span>
           </div>
           <h2 id="stat-income">Rp0</h2>
           <small>Penjualan produk &amp; jasa</small>
@@ -123,7 +125,7 @@
         <div class="stat-card">
           <div class="stat-header">
             <span>Total Pengeluaran</span>
-            <span class="stat-icon expense-bg">↘</span>
+            <span class="stat-icon expense-bg"></span>
           </div>
           <h2 id="stat-expense">Rp0</h2>
           <small>Pembelian persediaan &amp; beban</small>
@@ -141,7 +143,7 @@
         <div class="stat-card">
           <div class="stat-header">
             <span>Saldo Kas Tunai</span>
-            <span class="stat-icon cash-bg">💵</span>
+            <span class="stat-icon cash-bg"></span>
           </div>
           <h2 id="stat-cash">Rp0</h2>
           <small>Kas (1001) &amp; Kas Kecil (1002)</small>
@@ -150,7 +152,7 @@
         <div class="stat-card">
           <div class="stat-header">
             <span>Saldo Bank / Rekening</span>
-            <span class="stat-icon bank-bg">🏦</span>
+            <span class="stat-icon bank-bg"></span>
           </div>
           <h2 id="stat-bank">Rp0</h2>
           <small>Kas di Bank (1003)</small>
@@ -159,7 +161,7 @@
         <div class="stat-card">
           <div class="stat-header">
             <span>Perlengkapan Kantor</span>
-            <span class="stat-icon stock-bg">📦</span>
+            <span class="stat-icon stock-bg"></span>
           </div>
           <h2 id="stat-stock">Rp0</h2>
           <small>Perlengkapan (1007)</small>
@@ -168,7 +170,7 @@
         <div class="stat-card">
           <div class="stat-header">
             <span>Piutang Usaha</span>
-            <span class="stat-icon ar-bg">⏳</span>
+            <span class="stat-icon ar-bg"></span>
           </div>
           <h2 id="stat-ar">Rp0</h2>
           <small>Piutang Usaha (1004)</small>
@@ -177,7 +179,7 @@
         <div class="stat-card">
           <div class="stat-header">
             <span>Utang Usaha</span>
-            <span class="stat-icon ap-bg">⚠️</span>
+            <span class="stat-icon ap-bg"></span>
           </div>
           <h2 id="stat-ap">Rp0</h2>
           <small>Utang Usaha (2001)</small>
@@ -188,17 +190,17 @@
       <div class="panel highlight-panel">
         <div class="panel-heading">
           <div>
-            <h3>✨ Natural Language Transaction Input</h3>
+            <h3>Catat transaksi dengan bahasa sehari-hari</h3>
             <p>Ketik transaksi sehari-hari lengkap dengan tanggal &amp; nominal. Sistem otomatis mendeteksi akun akuntansi dan tanggal secara akurat.</p>
           </div>
-          <span class="badge-ai">AI SMART PARSER</span>
+          <span class="badge-ai">PARSER OTOMATIS</span>
         </div>
 
         <div class="smart-input-container">
           <textarea id="nlp-input" rows="3" placeholder="Ketik transaksi kamu di sini... Contoh: Beli bensin 50k cash pada tanggal 10 November 2026 | Bayar gaji 4jt transfer kemarin | Terima pendapatan jasa 750k QRIS"></textarea>
           <div class="nlp-footer">
             <div class="chip-container">
-              <span class="chip-label">Coba klik contoh:</span>
+              <span class="chip-label">Contoh input:</span>
               <button class="chip" onclick="fillExample('Beli bensin 50k cash pada tanggal 10 November 2026')">Bensin 50k (10 Nov 2026)</button>
               <button class="chip" onclick="fillExample('Bayar wifi internet kantor 300rb transfer kemarin')">Wifi 300rb Transfer (Kemarin)</button>
               <button class="chip" onclick="fillExample('Terima pendapatan jasa konsultasi 2.500.000 melalui transfer bank')">Jasa 2.5jt Bank</button>
@@ -217,7 +219,7 @@
         <!-- Preview Modal / Area before saving -->
         <div id="nlp-preview-card" class="preview-card hidden">
           <div class="preview-header">
-            <h4>✔ Konfirmasi &amp; Verifikasi Transaksi</h4>
+            <h4> Konfirmasi &amp; Verifikasi Transaksi</h4>
             <span class="preview-tag" id="preview-type-tag">PENJUALAN</span>
           </div>
 
@@ -273,7 +275,7 @@
 
           <div class="preview-actions">
             <button class="primary-btn" id="btn-save-confirmed">
-              💾 Simpan &amp; Posting ke Jurnal
+               Simpan &amp; Posting ke Jurnal
             </button>
             <button class="outline-btn" id="btn-cancel-preview">Batal</button>
           </div>
@@ -341,8 +343,8 @@
             <p>Kelola seluruh mutasi dan riwayat transaksi usaha.</p>
           </div>
           <div class="filter-actions">
-            <button class="outline-btn" onclick="exportTransactionsCSV()">📥 Download CSV</button>
-            <button class="outline-btn" onclick="printReport('Daftar Riwayat Transaksi')">🖨 Cetak / PDF</button>
+            <button class="outline-btn" onclick="exportTransactionsCSV()"> Download CSV</button>
+            <button class="outline-btn" onclick="printReport('Daftar Riwayat Transaksi')"> Cetak / PDF</button>
             <button class="primary-btn" onclick="showManualTransactionModal()">+ Tambah Transaksi</button>
           </div>
         </div>
@@ -395,8 +397,8 @@
     <!-- ════ PAGE: UTANG & PIUTANG ════ -->
     <section id="receivables-payables" class="page hidden">
       <div class="tabs-header">
-        <button class="tab-btn active" onclick="switchRPView('receivable')">⏳ Piutang Usaha (AR)</button>
-        <button class="tab-btn" onclick="switchRPView('payable')">⚠️ Utang Usaha (AP)</button>
+        <button class="tab-btn active" onclick="switchRPView('receivable')"> Piutang Usaha (AR)</button>
+        <button class="tab-btn" onclick="switchRPView('payable')"> Utang Usaha (AP)</button>
       </div>
 
       <div class="panel">
@@ -406,8 +408,8 @@
             <p id="rp-panel-subtitle">Daftar tagihan yang belum dilunasi oleh pelanggan.</p>
           </div>
           <div class="report-controls">
-            <button class="outline-btn" onclick="exportRPCSV()">📥 Download CSV</button>
-            <button class="outline-btn" onclick="printReport(document.getElementById('rp-panel-title').textContent)">🖨 Cetak / PDF</button>
+            <button class="outline-btn" onclick="exportRPCSV()"> Download CSV</button>
+            <button class="outline-btn" onclick="printReport(document.getElementById('rp-panel-title').textContent)"> Cetak / PDF</button>
           </div>
         </div>
 
@@ -441,8 +443,8 @@
           </div>
           <div class="report-controls">
             <span id="journal-balance-badge" class="badge-balanced">DEBIT = KREDIT</span>
-            <button class="outline-btn" onclick="exportJournalCSV()">📥 Download CSV</button>
-            <button class="outline-btn" onclick="printReport('Jurnal Umum')">🖨 Cetak / PDF</button>
+            <button class="outline-btn" onclick="exportJournalCSV()"> Download CSV</button>
+            <button class="outline-btn" onclick="printReport('Jurnal Umum')"> Cetak / PDF</button>
           </div>
         </div>
 
@@ -476,8 +478,8 @@
           </div>
           <div class="report-controls">
             <select id="ledger-account-select" onchange="loadLedger()"></select>
-            <button class="outline-btn" onclick="exportLedgerCSV()">📥 Download CSV</button>
-            <button class="outline-btn" onclick="printReport('Buku Besar: ' + (document.getElementById('ledger-account-select').selectedOptions[0]?.text || ''))">🖨 Cetak / PDF</button>
+            <button class="outline-btn" onclick="exportLedgerCSV()"> Download CSV</button>
+            <button class="outline-btn" onclick="printReport('Buku Besar: ' + (document.getElementById('ledger-account-select').selectedOptions[0]?.text || ''))"> Cetak / PDF</button>
           </div>
         </div>
 
@@ -509,8 +511,8 @@
           </div>
           <div class="report-controls">
             <span id="trial-balance-badge" class="badge-balanced">SEIMBANG</span>
-            <button class="outline-btn" onclick="exportTrialBalanceCSV()">📥 Download CSV</button>
-            <button class="outline-btn" onclick="printReport('Neraca Saldo')">🖨 Cetak / PDF</button>
+            <button class="outline-btn" onclick="exportTrialBalanceCSV()"> Download CSV</button>
+            <button class="outline-btn" onclick="printReport('Neraca Saldo')"> Cetak / PDF</button>
           </div>
         </div>
 
@@ -541,8 +543,8 @@
             <p>Ringkasan omzet penjualan, HPP, laba kotor, dan rincian beban operasional.</p>
           </div>
           <div class="report-controls">
-            <button class="outline-btn" onclick="exportIncomeStatementCSV()">📥 Download CSV</button>
-            <button class="outline-btn" onclick="printReport('Laporan Laba Rugi')">🖨 Cetak / PDF</button>
+            <button class="outline-btn" onclick="exportIncomeStatementCSV()"> Download CSV</button>
+            <button class="outline-btn" onclick="printReport('Laporan Laba Rugi')"> Cetak / PDF</button>
           </div>
         </div>
 
@@ -560,8 +562,8 @@
           </div>
           <div class="report-controls">
             <span id="bs-balanced-badge" class="badge-balanced">ASET = LIABILITAS + EKUITAS</span>
-            <button class="outline-btn" onclick="exportBalanceSheetCSV()">📥 Download CSV</button>
-            <button class="outline-btn" onclick="printReport('Laporan Posisi Keuangan')">🖨 Cetak / PDF</button>
+            <button class="outline-btn" onclick="exportBalanceSheetCSV()"> Download CSV</button>
+            <button class="outline-btn" onclick="printReport('Laporan Posisi Keuangan')"> Cetak / PDF</button>
           </div>
         </div>
 
@@ -578,8 +580,8 @@
             <p>Arus kas masuk dan keluar dari Operasi, Investasi, dan Pendanaan.</p>
           </div>
           <div class="report-controls">
-            <button class="outline-btn" onclick="exportCashFlowCSV()">📥 Download CSV</button>
-            <button class="outline-btn" onclick="printReport('Laporan Arus Kas')">🖨 Cetak / PDF</button>
+            <button class="outline-btn" onclick="exportCashFlowCSV()"> Download CSV</button>
+            <button class="outline-btn" onclick="printReport('Laporan Arus Kas')"> Cetak / PDF</button>
           </div>
         </div>
 
@@ -596,8 +598,8 @@
             <p>Modal Akhir = Modal Awal + Laba Bersih - Prive</p>
           </div>
           <div class="report-controls">
-            <button class="outline-btn" onclick="exportEquityCSV()">📥 Download CSV</button>
-            <button class="outline-btn" onclick="printReport('Laporan Perubahan Ekuitas')">🖨 Cetak / PDF</button>
+            <button class="outline-btn" onclick="exportEquityCSV()"> Download CSV</button>
+            <button class="outline-btn" onclick="printReport('Laporan Perubahan Ekuitas')"> Cetak / PDF</button>
           </div>
         </div>
 
@@ -614,8 +616,8 @@
             <p>Kelola kode dan klasifikasi akun standar akuntansi usaha.</p>
           </div>
           <div class="report-controls">
-            <button class="outline-btn" onclick="exportAccountsCSV()">📥 Download CSV</button>
-            <button class="outline-btn" onclick="printReport('Bagan Akun (Chart of Accounts)')">🖨 Cetak / PDF</button>
+            <button class="outline-btn" onclick="exportAccountsCSV()"> Download CSV</button>
+            <button class="outline-btn" onclick="printReport('Bagan Akun (Chart of Accounts)')"> Cetak / PDF</button>
             <button class="primary-btn" onclick="showAddAccountModal()">+ Tambah Akun Baru</button>
           </div>
         </div>
