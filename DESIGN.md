@@ -1,48 +1,48 @@
 # FinanceFlow Design Direction
 
 ## Product identity
-FinanceFlow is a practical financial workspace for small businesses and operators. The interface should feel dependable, legible, and focused on accurate bookkeeping rather than promotional SaaS marketing.
+FinanceFlow is a focused bookkeeping workspace for small businesses. It should feel dependable, precise, and calm. The interface supports daily financial work, not product marketing.
 
 ## Audience and primary task
-The primary audience records daily sales, purchases, operating expenses, cash movements, receivables, and payables. The most frequent action is entering a transaction and checking its accounting effect.
+Operators record sales, purchases, expenses, capital, withdrawals, cash movements, receivables, and payables. They review journals, ledgers, trial balance, and financial statements. The most frequent action is recording a transaction and checking its accounting effect.
 
-## Visual language
-- Preserve the existing FinanceFlow name and compact F mark.
-- Use the established navy and blue identity from the existing application.
-- Main canvas: warm, low-glare neutral.
-- Primary surface: white.
-- Main text: deep blue-grey.
-- Primary action: restrained cobalt blue.
-- Income and balanced states: green with text labels.
-- Expense and error states: muted red with text labels.
-- Warning states: amber with text labels.
-- Avoid decorative gradients, ambient glows, excessive shadows, and gratuitous animation.
+## Visual concept: Ledger Studio
+A contemporary accounting ledger with a warm paper-like workspace and deep botanical-teal navigation. The visual identity uses restrained contrast, compact information hierarchy, fine rules, and clear financial typography. It avoids decorative gradients, glowing panels, oversized icons, and excessive card nesting.
 
-## Typography
-Use Plus Jakarta Sans when available, with system sans-serif fallbacks. Headings use compact, confident weights. Tables and metadata prioritize legibility over density.
+## Design tokens
+- Canvas: soft mineral grey-green (#f3f4ef).
+- Surface: warm near-white (#fffefa).
+- Navigation: deep evergreen charcoal (#172c2b).
+- Primary action: muted ledger teal (#245b57).
+- Primary text: dark green-grey (#202d2b).
+- Secondary text: muted grey-green (#66736f).
+- Border: quiet grey-green (#dce2dc).
+- Positive: accessible green (#267653), paired with labels.
+- Negative: muted red (#b84f49), paired with labels.
+- Warning: amber-brown (#9b6b24), paired with labels.
+- Typography: Plus Jakarta Sans with system fallbacks.
+- Radii: 7px small, 11px medium, 15px large.
+- Elevation: subtle borders and low, diffuse shadows. Avoid floating-card excess.
 
 ## Layout
-- Desktop: fixed grouped navigation, flexible workspace, financial summaries, transaction composer, charts, and ledger tables.
-- Tablet: narrower navigation and fewer columns.
-- Mobile: horizontal, thumb-scrollable primary navigation; stacked page header; two-column metric summary where it remains legible; single-column forms; contained horizontal scrolling for dense accounting tables.
-- Print: remove navigation and interactive controls; show the selected report with a clear business header and A4-friendly tables.
+- Desktop: fixed grouped navigation, wide content canvas, clear page title, financial summaries, transaction composer, analytics, and ledger tables.
+- Tablet: compact navigation and adaptive columns.
+- Mobile: sticky horizontal navigation, stacked page header, two-column metrics where readable, single-column forms, and contained horizontal scrolling for dense tables.
+- Print: hide navigation and controls; show selected report with a clear business header and A4-friendly tables.
 
 ## Interaction principles
-- Transaction input is the primary workflow and must be easy to find.
-- Every action has a visible hover, focus, active, and disabled state.
-- Forms use visible labels and explicit validation.
-- Confirm before posting or destructive changes.
-- Data views provide useful empty, loading, and error states.
-- Respect reduced-motion preferences and keyboard navigation.
+- Transaction entry remains the primary workflow.
+- Every control has visible hover, focus-visible, active, and disabled states.
+- Use visible form labels, clear validation, and recoverable errors.
+- Confirm posting and destructive operations.
+- Provide loading, empty, error, and success feedback.
+- Never use color alone to communicate financial status.
+- Respect keyboard navigation, zoom/reflow, and prefers-reduced-motion.
 
 ## Composition dials
-- ENERGY: 2/5. Calm and purposeful, with enough contrast to make important actions visible.
-- RHYTHM: 3/5. Distinguish the transaction composer, financial summary, analytics, and detailed ledgers through spacing and layout.
-- MOTION: 1/5. Motion is limited to short feedback transitions; no looping or decorative movement.
+- ENERGY: 2/5. Calm and trustworthy.
+- RHYTHM: 3/5. Distinct sections with compact accounting density.
+- MOTION: 1/5. Only brief feedback transitions.
 
-## Purpose notes
-- Navy navigation separates the application structure from report content.
-- Cobalt is reserved for the primary action and selected navigation.
-- Green and red communicate financial direction, always paired with text.
-- Dense accounting tables stay in their own scroll containers on narrow screens to protect the page layout.
-- The highlighted profit metric is visually distinct because it summarizes a key business outcome.
+## Rationale
+The evergreen navigation establishes a stable application frame. Warm neutral surfaces reduce visual glare. Teal identifies primary actions without competing with positive and negative accounting states. Fine table rules and tabular number alignment support accurate scanning. Mobile navigation remains thumb-scrollable while dense records scroll inside their own containers.
