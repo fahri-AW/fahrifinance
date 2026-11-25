@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Lewati ke konten</a>
@@ -201,6 +201,7 @@
         </div>
 
         <div class="smart-input-container">
+          <label class="input-caption" for="nlp-input">Tulis transaksi</label>
           <textarea id="nlp-input" rows="3" placeholder="Ketik transaksi kamu di sini... Contoh: Beli bensin 50k cash pada tanggal 10 November 2026 | Bayar gaji 4jt transfer kemarin | Terima pendapatan jasa 750k QRIS"></textarea>
           <div class="nlp-footer">
             <div class="chip-container">
@@ -769,6 +770,6 @@
 <!-- Toast Notifications -->
 <div id="toast" class="toast"></div>
 
-<script src="app.js"></script>
+<script src="app.js" defer></script>
 </body>
 </html>
