@@ -2290,3 +2290,274 @@ tfoot td {
   font-size: 11px;
   font-weight: 700;
 }
+
+
+/* ════════════════════════════════════════════════════════════════
+   FINANCEFLOW / LEDGER STUDIO
+   Purposeful accounting workspace refresh
+   ════════════════════════════════════════════════════════════════ */
+:root {
+  --font-family: 'Plus Jakarta Sans', Inter, ui-sans-serif, system-ui, sans-serif;
+  --primary: #245b57;
+  --primary-dark: #194844;
+  --primary-light: #e8f1ef;
+  --sidebar-bg: #172c2b;
+  --sidebar-hover: #233d3b;
+  --sidebar-active: #315b55;
+  --background: #f3f4ef;
+  --surface: #fffefa;
+  --text-main: #202d2b;
+  --text-muted: #66736f;
+  --border: #dce2dc;
+  --success: #267653;
+  --success-bg: #eaf3ed;
+  --danger: #b84f49;
+  --danger-bg: #f8ece9;
+  --warning: #9b6b24;
+  --warning-bg: #f7f0df;
+  --info: #426f8a;
+  --info-bg: #eaf1f5;
+  --radius-sm: 7px;
+  --radius-md: 11px;
+  --radius-lg: 15px;
+  --shadow-sm: 0 1px 2px rgb(24 42 38 / 5%);
+  --shadow-md: 0 8px 24px rgb(24 42 38 / 7%);
+  --shadow-lg: 0 18px 44px rgb(24 42 38 / 10%);
+}
+
+html { scroll-behavior: smooth; }
+body {
+  background: var(--background);
+  color: var(--text-main);
+  letter-spacing: -.01em;
+}
+button, input, select, textarea { font: inherit; }
+button { -webkit-tap-highlight-color: transparent; }
+:focus-visible {
+  outline: 3px solid rgb(49 111 103 / 42%);
+  outline-offset: 2px;
+}
+
+.layout { min-height: 100dvh; }
+.sidebar {
+  width: 248px;
+  padding: 25px 15px 17px;
+  background: var(--sidebar-bg);
+  border-right: 1px solid rgb(255 255 255 / 7%);
+}
+.brand { gap: 11px; margin-bottom: 34px; padding: 0 9px; }
+.brand-icon {
+  width: 39px; height: 39px; border-radius: 11px;
+  background: #d7e6df; color: #1d4944;
+  box-shadow: none; font-size: 20px;
+}
+.brand-text h2 { color: #f5f7f2; font-size: 16px; letter-spacing: -.55px; }
+.brand-text small { color: #a8b9b1; font-size: 10px; }
+.nav-section { margin-bottom: 23px; }
+.nav-heading {
+  color: #91a69d; font-size: 9px; letter-spacing: 1.25px;
+  padding: 0 12px; margin-bottom: 9px;
+}
+.nav-item {
+  min-height: 41px; margin-bottom: 3px; padding: 9px 12px;
+  border-radius: 8px; color: #c6d2cc; font-size: 12px;
+  transition: background-color .16s ease, color .16s ease;
+}
+.nav-item:hover { background: var(--sidebar-hover); color: #fff; }
+.nav-item.active {
+  position: relative; background: var(--sidebar-active);
+  color: #fff; font-weight: 700;
+}
+.nav-item.active::before {
+  content: ""; position: absolute; inset: 9px auto 9px 0;
+  width: 3px; border-radius: 0 4px 4px 0; background: #c7e1d5;
+}
+.sidebar-user { border-color: rgb(255 255 255 / 12%); padding: 15px 5px 0; }
+.user-avatar { background: #d7e6df; color: #214b45; }
+.role-badge { background: #294541; color: #d4e5dc; }
+
+.main { padding: 30px clamp(18px, 3vw, 46px) 48px; }
+.topbar {
+  align-items: flex-end; gap: 20px; margin-bottom: 26px;
+  padding-bottom: 20px; border-bottom: 1px solid var(--border);
+}
+.topbar h2 {
+  color: #1d302d; font-size: clamp(21px, 2vw, 27px);
+  font-weight: 800; letter-spacing: -.9px;
+}
+.topbar p { margin-top: 5px; color: #718079; font-size: 12px; }
+.topbar-actions { gap: 10px; }
+.date-badge {
+  padding: 9px 12px; border: 1px solid var(--border);
+  border-radius: 8px; background: #fbfcf8; color: #5e6c65; font-size: 11px;
+}
+.primary-btn {
+  min-height: 42px; padding: 10px 16px; border-radius: 8px;
+  background: var(--primary); box-shadow: none; font-weight: 700;
+}
+.primary-btn:hover { background: var(--primary-dark); transform: translateY(-1px); }
+.outline-btn, .danger-btn {
+  min-height: 39px; border-radius: 8px; box-shadow: none;
+}
+.stats-grid { gap: 12px; margin-bottom: 19px; }
+.stat-card {
+  position: relative; min-width: 0; padding: 17px 17px 16px;
+  border: 1px solid #dfe5de; border-radius: 11px;
+  background: var(--surface); box-shadow: 0 2px 5px rgb(31 49 42 / 3%);
+}
+.stat-card::after {
+  content: ""; position: absolute; top: 0; left: 16px; right: 16px;
+  height: 2px; background: #d8e4dc;
+}
+.stat-card.highlight {
+  border-color: #244f49; background: #244f49; color: #fff;
+  box-shadow: 0 7px 18px rgb(28 69 62 / 12%);
+}
+.stat-card.highlight::after { background: #a9c9ba; }
+.stat-card.highlight span, .stat-card.highlight small { color: #d4e5dc; }
+.stat-header { margin-bottom: 12px; }
+.stat-header span { color: #697770; font-size: 11px; font-weight: 700; }
+.stat-icon { width: 29px; height: 29px; border-radius: 8px; }
+.income-bg { background: #eaf3ed; color: #267653; }
+.expense-bg { background: #f8ece9; color: #b84f49; }
+.profit-bg { background: rgb(255 255 255 / 14%); color: #dcece4; }
+.cash-bg { background: #f7f0df; color: #92641f; }
+.bank-bg { background: #eaf1f5; color: #426f8a; }
+.stock-bg { background: #f0edf6; color: #70618e; }
+.ar-bg { background: #f7eee4; color: #9b6535; }
+.ap-bg { background: #f7e9e8; color: #a94f4a; }
+.stat-card h2 {
+  margin-bottom: 5px; color: #243a34; font-size: clamp(17px, 1.5vw, 22px);
+  font-variant-numeric: tabular-nums; letter-spacing: -.65px;
+  overflow-wrap: anywhere;
+}
+.stat-card.highlight h2 { color: #fff; }
+.stat-card small { color: #7b8780; font-size: 10px; }
+
+.panel {
+  margin-bottom: 18px; padding: 21px;
+  border: 1px solid #dfe5de; border-radius: 12px;
+  background: var(--surface); box-shadow: 0 2px 7px rgb(31 49 42 / 3%);
+}
+.panel-heading { gap: 15px; margin-bottom: 17px; }
+.panel-heading h3 { color: #293b35; font-size: 14px; font-weight: 800; letter-spacing: -.25px; }
+.panel-heading p { color: #7b8780; font-size: 11px; }
+.highlight-panel { border-left: 3px solid var(--primary); }
+.badge-ai {
+  border: 1px solid #d5e4dc; border-radius: 6px;
+  background: #edf4ef; color: #315f50; letter-spacing: .25px;
+}
+.smart-input-container textarea {
+  min-height: 112px; border: 1px solid #d6dfd8; border-radius: 9px;
+  background: #fbfcf8; color: #263a33; font-size: 13px;
+}
+.smart-input-container textarea:focus {
+  border-color: #477b70; outline: 3px solid rgb(71 123 112 / 13%);
+}
+.chip { border-color: #dce5dd; border-radius: 6px; background: #f2f5f0; color: #52645a; }
+.chip:hover { background: #e7eee8; color: #29483e; }
+.preview-card { border-top: 1px solid #dce4dd; animation: none; }
+.preview-header h4 { color: #315f50; }
+.preview-tag { border-radius: 5px; background: #edf4ef; color: #315f50; }
+.form-group label { color: #5f7067; font-size: 11px; }
+.form-group input, .form-group select, .form-group textarea,
+.filters-bar input, .filters-bar select, .report-controls select {
+  border-color: #d4ded6; border-radius: 8px; background: #fffefa; color: #263a33;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus,
+.filters-bar input:focus, .filters-bar select:focus {
+  border-color: #477b70; outline: 3px solid rgb(71 123 112 / 13%);
+}
+.charts-grid { gap: 14px; }
+.chart-panel { min-width: 0; }
+.table-wrap {
+  border: 1px solid #e1e7e0; border-radius: 9px;
+  background: #fffefa; scrollbar-color: #b8c8bd #f2f5f0;
+}
+table { font-size: 11px; }
+th {
+  padding: 12px 13px; border-bottom: 1px solid #d9e2da;
+  background: #f0f4ef; color: #52645a; font-size: 9px;
+  letter-spacing: .65px; text-transform: uppercase;
+}
+td { padding: 12px 13px; border-bottom-color: #edf0eb; color: #34453e; }
+tbody tr:hover td { background: #f7f9f4; }
+tfoot td { border-top-color: #d5dfd6; background: #f0f4ef; }
+.amount-pos { color: #267653; }
+.amount-neg { color: #b84f49; }
+.status-badge, .badge-balanced, .badge-unbalanced {
+  min-height: 26px; border-radius: 6px; font-size: 9px;
+}
+.status-paid, .badge-balanced { border-color: #cfe2d4; background: #eaf3ed; color: #286b4c; }
+.status-unpaid, .badge-unbalanced { border-color: #edd2ce; background: #f8ece9; color: #a84b45; }
+.status-partial { border-color: #e9dbbd; background: #f7f0df; color: #876021; }
+.financial-statement {
+  padding: 22px; border-color: #dfe5de; border-radius: 11px;
+  background: #fffefa;
+}
+.fs-row { border-color: #e7ece6; color: #34453e; font-size: 11px; }
+.fs-header { border-color: #9caea3; color: #293b35; font-size: 12px; }
+.fs-subtotal { border-radius: 7px; background: #f0f4ef; color: #30483d; }
+.fs-total {
+  border-color: #c9ddd2; border-radius: 8px;
+  background: #eaf2ed; color: #24574a;
+}
+.fs-subitem { color: #69776f; }
+.tabs-header { gap: 6px; }
+.tab-btn {
+  min-height: 40px; border-color: #d9e2da; border-radius: 7px;
+  background: #fffefa; color: #596b61;
+}
+.tab-btn.active { border-color: #315f55; background: #315f55; color: #fff; }
+.modal-overlay { background: rgb(19 39 35 / 62%); }
+.modal {
+  border-color: #dce4dd; border-radius: 13px;
+  background: #fffefa; box-shadow: 0 20px 60px rgb(15 36 30 / 20%);
+}
+.modal-header h3 { color: #293b35; }
+.close-btn { border-radius: 8px; }
+.toast {
+  border-color: #294c43; border-radius: 9px;
+  background: #1d3933; box-shadow: var(--shadow-md);
+}
+.skip-link { border-radius: 7px; background: #173b35; }
+
+@media (max-width: 1180px) {
+  .sidebar { width: 226px; }
+}
+@media (max-width: 860px) {
+  .sidebar {
+    gap: 10px; padding: 9px 12px;
+    background: #172c2b; box-shadow: 0 2px 10px rgb(16 39 34 / 10%);
+  }
+  .nav-item { border-radius: 7px; }
+  .nav-item.active::before {
+    top: auto; right: 10px; bottom: 2px; left: 10px;
+    width: auto; height: 2px; background: #c7e1d5;
+  }
+  .main { padding-top: 20px; }
+}
+@media (max-width: 600px) {
+  .main { padding: 17px 12px calc(28px + env(safe-area-inset-bottom)); }
+  .topbar { padding-bottom: 15px; }
+  .topbar h2 { font-size: 21px; }
+  .topbar-actions { gap: 8px; }
+  .date-badge { max-width: 100%; }
+  .stats-grid { gap: 9px; }
+  .stat-card { padding: 14px 12px; border-radius: 9px; }
+  .stat-card::after { left: 12px; right: 12px; }
+  .stat-header span { font-size: 10px; }
+  .stat-card small { line-height: 1.45; }
+  .panel { padding: 15px 13px; border-radius: 10px; }
+  .panel-heading h3 { font-size: 13px; }
+  .table-wrap { border-radius: 8px; }
+  .table-wrap table { min-width: 620px; }
+  .modal { border-radius: 13px 13px 8px 8px; }
+}
+@media (max-width: 360px) {
+  .stats-grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}
